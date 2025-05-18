@@ -68,9 +68,6 @@ Upgrade
 
 Please be sure to access [Admin's guide - GROWI Docs](https://docs.growi.org/en/admin-guide/)([en](https://docs.growi.org/en/admin-guide/)/[ja](https://docs.growi.org/ja/admin-guide/)) and see 'Upgrade' section before upgrading. Sometimes you may have to deal with problems that may occur by yourself.
 
-#### Upgrading to v4.2 or later
-
-To upgrade app to v4.2 or later, you have to upgrade mongoDB to v4.x. Please see [this page](https://docs.growi.org/en/admin-guide/upgrading/42x.html) for the details.
 
 ### Upgrading app container
 
@@ -79,18 +76,18 @@ To upgrade app to v4.2 or later, you have to upgrade mongoDB to v4.x. Please see
 cd growi
 
 # stop
-docker-compose stop
+docker compose stop
 
 # remove current container and images
-docker-compose rm app
-docker rmi weseek/growi:5
+docker compose rm app
+docker rmi weseek/growi:7
 
 # rebuild app container image
 git pull
-docker-compose build
+docker compose build
 
 # start
-docker-compose up
+docker compose up
 ```
 
 Migrate from crowi-plus-docker-compose
@@ -122,7 +119,6 @@ More convenient Examples
 
 * [Multiple sites](https://github.com/weseek/growi-docker-compose/tree/master/examples/multi-app)
 * [HTTPS(with Let's Encrypt) proxy integration](https://github.com/weseek/growi-docker-compose/tree/master/examples/https-portal)
-* [HackMD(CodiMD) integration](https://github.com/weseek/growi-docker-compose/tree/master/examples/integrate-with-hackmd)
 * [Backup MongoDB data](https://github.com/weseek/growi-docker-compose/tree/master/examples/backup-mongodb-data)
 
 
